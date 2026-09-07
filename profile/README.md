@@ -40,7 +40,7 @@
 
 | 仓库 | 内容 |
 |---|---|
-| `qingjian` | 输入法本体：平台无关的核心引擎、macOS 输入法、数据生成工具、设计文档与用户文档 |
+| [`qingjian`](https://github.com/qingjian-team/qingjian) | 输入法本体：平台无关的核心引擎、macOS 输入法、数据生成工具、设计文档与用户文档 |
 | `qingjian-web` | 官网 [qingjian.app](https://qingjian.app) 的源码，「文档」页从主仓库拉取 |
 | `.github` | 这个页面 |
 
@@ -62,7 +62,7 @@ Linux    → IBus / Fcitx              计划中
 ## 状态
 
 测试版，作者自用中，正在给少数测试者打包。安装包、文档与更新日志都在 [qingjian.app](https://qingjian.app)。
-源码在开源前暂不公开。
+源码以 GPL-3.0-or-later 开源，在 [qingjian-team/qingjian](https://github.com/qingjian-team/qingjian)。
 
 ---
 
@@ -77,6 +77,6 @@ It is an input method first: sentence conversion, typo correction, fuzzy pinyin,
 
 Everything runs on your machine. There are no accounts and no telemetry. The optional cloud suggestions are off by default and, when enabled, talk only to the AI provider you configure yourself.
 
-macOS is available as a beta; Windows and Linux are planned. The source will be published later.
+macOS is available as a beta; Windows and Linux are planned. The source is on GitHub under GPL-3.0-or-later.
 
 </details>
