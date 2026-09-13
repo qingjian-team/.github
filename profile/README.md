@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="qingjian-mark.png" alt="青简" width="140">
+  <img src="qingjian-mark.png" alt="青简" width="52">
 </p>
 
 <h1 align="center">青简 Qingjian</h1>
