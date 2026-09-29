@@ -1,82 +1,58 @@
 <p align="center">
-  <img src="qingjian-mark.png" alt="青简" width="52">
+  <img src="qingjian-mark.png" alt="青简竹简图标" width="72">
 </p>
 
 <h1 align="center">青简 Qingjian</h1>
 
-<p align="center">输入的不只是文字。</p>
+<p align="center"><strong>好好输入，顺便多认识一个词。</strong></p>
 
 <p align="center">
   <a href="https://qingjian.app">官网</a> ·
-  <a href="https://qingjian.app/docs">文档</a> ·
-  <a href="https://qingjian.app/download">下载</a>
+  <a href="https://qingjian.app/download">下载</a> ·
+  <a href="https://qingjian.app/docs">使用文档</a> ·
+  <a href="https://github.com/qingjian-team/qingjian/issues/new/choose">反馈</a>
 </p>
 
----
-
-青简是一个用 Rust 写的拼音输入法。它的目标不只是「把拼音变成汉字」，
-而是让输入本身成为一种轻量、持续、几乎没有额外负担的语言接触方式。
-
-打字时，候选词旁边多一条你正在学的那门语言的译词：
+青简是一款输入法。像平常一样输入拼音、选择候选、写完整句；候选旁的一条译词，让语言学习自然发生在日常输入里。译词是辅助信息，输入始终是主体。
 
 ```text
-1  开发            v. develop
-2  编程            v. program
-3  架构            n. architecture
-4  编译            v. compile
-5  语言            n. language
+1  开发        development
+2  编程        programming
+3  架构        architecture
 ```
 
-候选词仍然是主体，译词只是较小、较浅的辅助信息。把学习语言换成日语，开发 · 学习 · 语言 会显示「開発(かいはつ)する · 勉強(べんきょう)する · 言語(げんご)」。
-见得还不多的译词画成橙色，看熟了自动变回灰色。
+学习语言可选英语、日语或西班牙语，一次只显示一种，也可以关闭译词。整句输入、简拼、拼写纠错、双拼、五笔和本地整句模型，都是为了先把字打好。
 
-## 三条原则
+## 下载与使用
 
-- **先是一个好用的输入法。** 整句转换、拼写纠错、模糊音、双拼、中英混输、emoji，输入效率不为学习让路。
-- **一次只学一种语言。** 一个候选只显示一条译词，不在候选框里同时塞进英语、日语、韩语、德语。
-- **不打断。** 不弹题，不强迫记忆，只是把译词悄悄放在那里。如果用户需要思考「我现在是在打字还是在背单词」，那就是设计错了。
+- **macOS、Windows**：已有可下载安装的测试版；从[下载页](https://qingjian.app/download)选择安装包，按[安装说明](https://qingjian.app/docs/getting-started/install)开始使用。
+- **Linux**：已有 Fcitx5 版本，使用系统默认候选面板，目前需要手动启动后台服务。见 [Linux 使用说明](https://qingjian.app/docs/getting-started/linux)。
 
-## 仓库
+按键、设置、译词与数据位置都在[使用文档](https://qingjian.app/docs)。
+
+## 数据与隐私
+
+拼音转换、词库查询、本地模型、输入习惯学习和输入量统计都在设备上完成；青简不需要账号，也不上传本地统计。输入日志只保存在本机，可在设置中关闭或清空。检查更新会向官网请求版本列表，也可以关闭。
+
+可选的云联想默认关闭。开启后，青简会将当前输入及附近文字直接发送给用户自行填写的 AI 服务商，请求不经过青简的服务器。详见[数据与日志](https://qingjian.app/docs/help/data-and-logs)。
+
+## 项目仓库
 
 | 仓库 | 内容 |
 |---|---|
-| [`qingjian`](https://github.com/qingjian-team/qingjian) | 输入法本体：平台无关的核心引擎、macOS 输入法、数据生成工具、设计文档与用户文档 |
-| `qingjian-web` | 官网 [qingjian.app](https://qingjian.app) 的源码，「文档」页从主仓库拉取 |
-| `.github` | 这个页面 |
-
-## 平台
-
-核心引擎平台无关，各平台只负责接入系统输入接口与候选窗口。
-
-```text
-macOS    → Input Method Kit (IMK)     已可用（测试版）
-Windows  → Text Services Framework   计划中
-Linux    → IBus / Fcitx              计划中
-```
-
-## 隐私
-
-青简没有自己的服务器，不上传任何数据。拼音转换、词库、学习、释义全部在本机完成，没有账号，没有统计上报。
-可选的云联想缺省关闭，打开后数据直接从你的电脑发到你自己填写的 AI 服务商，密码框里绝不发送。
-
-## 状态
-
-测试版，作者自用中，正在给少数测试者打包。安装包、文档与更新日志都在 [qingjian.app](https://qingjian.app)。
-源码以 GPL-3.0-or-later 开源，在 [qingjian-team/qingjian](https://github.com/qingjian-team/qingjian)。
+| [`qingjian`](https://github.com/qingjian-team/qingjian) | 输入法源码、用户文档与开发文档；代码采用 GPL-3.0-or-later 许可 |
+| [`qingjian-web`](https://github.com/qingjian-team/qingjian-web) | [qingjian.app](https://qingjian.app) 官网源码 |
+| [`.github`](https://github.com/qingjian-team/.github) | 当前组织主页 |
 
 ---
 
 <details>
 <summary>English</summary>
 
-Qingjian (青简, "green bamboo slips") is a Chinese pinyin input method written in Rust.
-Next to each candidate it shows one translation in the language you are learning, English or Japanese, one at a time.
-Translations you have not seen much yet are drawn in orange and fade back to grey as they become familiar.
+Qingjian is an input method that puts a small translation beside each candidate while you type. Choose English, Japanese, or Spanish as your learning language, or turn translations off. Sentence conversion, typo correction, shuangpin, Wubi, and a local sentence model support everyday typing.
 
-It is an input method first: sentence conversion, typo correction, fuzzy pinyin, shuangpin, mixed English input and emoji all come before the learning feature, which never interrupts typing.
+Test builds are available for macOS and Windows. A Linux Fcitx5 version is also available; it currently uses the default candidate panel and requires the background service to be started manually. [Download Qingjian](https://qingjian.app/download) or read the [user guide](https://qingjian.app/docs).
 
-Everything runs on your machine. There are no accounts and no telemetry. The optional cloud suggestions are off by default and, when enabled, talk only to the AI provider you configure yourself.
-
-macOS is available as a beta; Windows and Linux are planned. The source is on GitHub under GPL-3.0-or-later.
+Local conversion and usage statistics stay on your device. There is no account or telemetry upload. Optional cloud suggestions are off by default; when enabled, your current input and nearby text go directly to the AI provider you configure. The source code is available in [`qingjian`](https://github.com/qingjian-team/qingjian) under GPL-3.0-or-later.
 
 </details>
